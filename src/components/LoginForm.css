@@ -25,6 +25,7 @@ form {
   width: fit-content;
   position: relative;
   top: 20vh;
+  /* border: 2px solid black; */
 }
 
 .form-group {

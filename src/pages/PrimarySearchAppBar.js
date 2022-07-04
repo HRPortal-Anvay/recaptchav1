@@ -82,8 +82,9 @@ export default function PrimarySearchAppBar() {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
-  const Logout = () => {
-    setUser({ email: "" })
+  const handleLogout = () => {
+    // setUser({ email: "" })
+    window.location.reload()
   }
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
@@ -103,7 +104,7 @@ export default function PrimarySearchAppBar() {
       onClose={handleMenuClose}
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
+      <MenuItem onClick={handleLogout}>Logout</MenuItem>
     </Menu>
   );
 
