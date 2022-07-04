@@ -53,7 +53,7 @@ function App() {
           <h2>Welcome <span>{user.email.split("@")[0]}!</span>
           </h2>
           <br /><br />
-          <button onClick={Logout} className="logout">Logout</button>
+          {/* <button onClick={Logout} className="logout">Logout</button> */}
 
           </div>
         </div>

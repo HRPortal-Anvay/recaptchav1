@@ -6,16 +6,17 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
-// import InputBase from '@mui/material/InputBase';
-import Badge from '@mui/material/Badge';
+import MoreIcon from '@mui/icons-material/MoreVert';
+import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
+// import InputBase from '@mui/material/InputBase';
+// import Badge from '@mui/material/Badge';
 // import MenuIcon from '@mui/icons-material/Menu';
 // import SearchIcon from '@mui/icons-material/Search';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import MoreIcon from '@mui/icons-material/MoreVert';
+// import MailIcon from '@mui/icons-material/Mail';
+// import NotificationsIcon from '@mui/icons-material/Notifications';
+
 
 // const Search = styled('div')(({ theme }) => ({
 //   position: 'relative',
@@ -60,7 +61,6 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 export default function PrimarySearchAppBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-  const [user, setUser] = React.useState("")
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
