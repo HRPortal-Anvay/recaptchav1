@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import LoginForm from "./components/LoginForm";
-import Dashboard from "./pages/Dashboard";
 import PrimarySearchAppBar from "./pages/PrimarySearchAppBar";
 import './App.css'
 
@@ -35,16 +34,14 @@ function App() {
       }
   }
 
-  const Logout = () => {
-    setUser({ email: "" })
-    window.location.reload()
-  }
+  // const Logout = () => {
+  //   window.location.reload()
+  // }
  
   return (
     <div className="App">
       {(user.email !== "") ? (
         <div className="welcome">
-          {/* <Dashboard /> */}
          <div className="navbar">
          <PrimarySearchAppBar />
          </div>
