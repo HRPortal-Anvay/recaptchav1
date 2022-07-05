@@ -134,7 +134,7 @@ export default function PrimarySearchAppBar() {
         </IconButton>
         <p>Messages</p>
       </MenuItem> */}
-      
+
       {/* notifications icon */}
       {/* <MenuItem>
         <IconButton
@@ -223,8 +223,8 @@ export default function PrimarySearchAppBar() {
             >
               {/* <AccountCircle /> */}
 
-              
-              <Avatar src="https://st2.depositphotos.com/1104517/11965/v/950/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg" alt="" max-height="100px" />
+
+              <Avatar src="https://st2.depositphotos.com/1104517/11965/v/950/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg" alt="profile" max-height="100px" />
             </IconButton>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>

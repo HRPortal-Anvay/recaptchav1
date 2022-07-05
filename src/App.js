@@ -10,8 +10,8 @@ function App() {
     password: "admin123"
   }
 
- 
-  const [user, setUser] = useState({email: ""})
+
+  const [user, setUser] = useState({ email: "" })
   const [error, setError] = useState("")
 
   const Login = details => {
@@ -20,37 +20,37 @@ function App() {
     if (
       //make specifications checking ONLY for password and display various Dashboards based on username
       //criteria like "if name contains a U, then direct user to User Dashboard"
-      details.email === adminUser.email && 
+      details.email === adminUser.email &&
       details.password === adminUser.password
-      ) {
-        console.log("Logged In.")
-        setUser({
-          email: details.email
-        })
+    ) {
+      console.log("Logged In.")
+      setUser({
+        email: details.email
+      })
 
-      } else {
-        console.log("Details do not match a user!")
-        setError("Details do not match a user!\n Please try again." )
-      }
+    } else {
+      console.log("Details do not match a user!")
+      setError("Invalid Email/Password")
+    }
   }
 
   // const Logout = () => {
   //   window.location.reload()
   // }
- 
+
   return (
     <div className="App">
       {(user.email !== "") ? (
         <div className="welcome">
-         <div className="navbar">
-         <PrimarySearchAppBar />
-         </div>
- <br /><br />
-          <div className="content">
-          <h2>Welcome <span>{user.email.split("@")[0]}!</span>
-          </h2>
+          <div className="navbar">
+            <PrimarySearchAppBar />
+          </div>
           <br /><br />
-          {/* <button onClick={Logout} className="logout">Logout</button> */}
+          <div className="content">
+            <h2>Welcome <span>{user.email.split("@")[0]}!</span>
+            </h2>
+            <br /><br />
+            {/* <button onClick={Logout} className="logout">Logout</button> */}
 
           </div>
         </div>
