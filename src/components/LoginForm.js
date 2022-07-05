@@ -58,7 +58,6 @@ export default function LoginForm({ Login, error }) {
               />
             </div>
 
-            {/* Remember Me + Forgot Password here */}
             <br />
             <div className="extra-info">
               <div className="remember">
@@ -75,9 +74,6 @@ export default function LoginForm({ Login, error }) {
                 type="submit"
                 disabled={!verified}
                 className="form-button"
-                sx={{
-                  border: "1px solid rgb(56,116,203)",
-                }}
               >
                 Sign In
               </Button>

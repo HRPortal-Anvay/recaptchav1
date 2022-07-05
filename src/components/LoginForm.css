@@ -8,7 +8,6 @@
 }
 
 #left {
-  /* background-color: rgb(207, 220, 149); */
   height: 100vh;
 }
 
@@ -18,10 +17,6 @@
 
 .error {
   color: red;
-  /* width: fit-content;
-  padding: 7px;
-  position: relative;
-  top: 10px; */
 }
 
 h2 {
@@ -50,6 +45,7 @@ form {
   text-align: left;
 }
 
+
 .btn-css {
   width: 300px;
   height: 40px;
@@ -59,9 +55,11 @@ form {
 }
 
 .form-button {
-  border-radius: 2px;
-  color: white;
+  border-radius: none !important;
+  color: black !important;
+  border: none !important;
   /* background-color: #5ea85e !important; */
+  background-color: rgb(217, 217, 217) !important;
 }
 
 .image {
