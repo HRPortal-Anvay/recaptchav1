@@ -34,10 +34,6 @@ function App() {
     }
   }
 
-  // const Logout = () => {
-  //   window.location.reload()
-  // }
-
   return (
     <div className="App">
       {(user.email !== "") ? (
@@ -50,7 +46,7 @@ function App() {
             <h2>Welcome <span>{user.email.split("@")[0]}!</span>
             </h2>
             <br /><br />
-            {/* <button onClick={Logout} className="logout">Logout</button> */}
+
 
           </div>
         </div>
