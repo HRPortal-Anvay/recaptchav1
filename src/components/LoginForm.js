@@ -5,6 +5,9 @@ import logo from '../images/ps-logo.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 
+
+
+
 export default function LoginForm({ Login, error }) {
 
   const [details, setDetails] = useState({ email: "", password: "" });
@@ -14,6 +17,7 @@ export default function LoginForm({ Login, error }) {
     console.log("Captcha Value: ", value)
     setVerified(true)
   }
+  
 
   const submitHandler = e => {
     e.preventDefault()
@@ -36,7 +40,7 @@ export default function LoginForm({ Login, error }) {
             <p>Welcome! Please enter your details.</p>
             <br />
             <div className="form-group">
-              <input type="email" name="email" id="email" placeholder='Email' className='btn-css' onChange={e => setDetails({ ...details, email: e.target.value })} value={details.email} />
+              <input type="email" name="email" id="email" placeholder='Email' className='btn-css' onChange={e => setDetails({ ...details, email: e.target.value })} value={details.email} required/>
             </div>
 
             {(error !== "") ? (
@@ -66,6 +70,7 @@ export default function LoginForm({ Login, error }) {
               </div>
               <div className="forgot-password">
                 <a href="#">Forgot Password?</a>
+
               </div>
             </div>
             <br />

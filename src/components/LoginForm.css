@@ -20,6 +20,12 @@
   color: red;
 }
 
+.error-color{
+  position: relative;
+  border: 1px solid red;
+  outline: none;
+}
+
 h2 {
   text-align: center;
 }
@@ -28,7 +34,6 @@ button.form-button {
   width: 100%;
   position: relative;
   top: 5px;
-  border: 2px solid green;
   padding: 10px
 }
 

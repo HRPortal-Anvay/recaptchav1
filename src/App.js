@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import LoginForm from "./components/LoginForm";
 import PrimarySearchAppBar from "./pages/PrimarySearchAppBar";
 import './App.css'
+import $ from 'jquery'
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
     } else {
       console.log("Details do not match a user!")
       setError("Invalid Email/Password")
+      
     }
   }
 
@@ -45,9 +47,6 @@ function App() {
           <div className="content">
             <h2>Welcome <span>{user.email.split("@")[0]}!</span>
             </h2>
-            <br /><br />
-
-
           </div>
         </div>
       ) : (
