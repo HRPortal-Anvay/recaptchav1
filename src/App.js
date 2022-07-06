@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import LoginForm from "./components/LoginForm";
 import PrimarySearchAppBar from "./pages/PrimarySearchAppBar";
 import './App.css'
-import $ from 'jquery'
 
 function App() {
 
