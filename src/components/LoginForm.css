@@ -79,6 +79,7 @@ form {
 .form-inner h2,
 .form-inner p {
   text-align: left;
+  color: black;
 }
 
 .extra-info {
