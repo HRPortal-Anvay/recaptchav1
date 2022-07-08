@@ -3,44 +3,49 @@ form {
   margin: auto;
   width: fit-content;
   position: relative;
-  top: 35vh;
-  /* border: .5px solid black; */
+  top: 50%;
+  border: .5px solid black; 
 }
 
-.form-button {
+.c-form-button {
   border-radius: 0 !important;
   color: black !important;
   border: none !important;
   background-color: rgb(217, 217, 217) !important;
   width: 330px;
   height: 40px;
-  padding: 12px;
 }
 
-.form-inner p {
+.c-form-inner p {
   color: rgb(147, 147, 147);
   font-size: 12px;
 }
 
-.login {
-  height: 30px;
+.c-login {
+  
 }
 
-.login a {
+.c-login a {
   margin: auto;
   text-decoration: none;
   color: black;
 }
 
-.login a:hover {
+.c-login a:hover {
   color: black;
 }
 
-.message {
+.c-message {
   text-align: center;
   font-size: 12px;
 }
 
-.message:not(a) {
+.c-message:not(a) {
   color: rgb(147, 147, 147);
+}
+
+.c-form-inner h2, .c-form-inner p {
+  text-align: center;
+  /* border: 1px solid red; */
+
 }
