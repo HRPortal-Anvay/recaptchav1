@@ -4,7 +4,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import logo from '../images/ps-logo.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -69,7 +69,8 @@ export default function LoginForm({ Login, error }) {
                 &nbsp; Remember Me
               </div>
               <div className="forgot-password">
-                <a href="#">Forgot Password?</a>
+                {/* <a href="#">Forgot Password?</a> */}
+                <Link to={"/forgot"}>Forgot Password?</Link>
 
               </div>
             </div>
