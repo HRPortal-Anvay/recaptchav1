@@ -36,7 +36,7 @@ export default function CheckEmail({ Login, error }) {
             > Close
             </Button> */}
 
-            <Link to={"/new"}>
+            <Link to={"/reset"}>
             <Button
               type="submit"
               className="c-form-button"
@@ -49,7 +49,7 @@ export default function CheckEmail({ Login, error }) {
           
           <div className="c-message">
             Didn't recieve the email? 
-            <a href="#">&nbsp; Click to resend</a>
+            <a href="/checkemail">&nbsp; Click to resend</a>
           </div>
 
         </div>
