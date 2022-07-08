@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './NewPassword.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 
 
@@ -20,13 +21,13 @@ export default function NewPassword({ Login, error }) {
   }
 
   return (
-    <div className="login">
+    <div className="n-login">
 
 
       <form onSubmit={submitHandler}>
 
 
-        <div className="form-inner">
+        <div className="n-form-inner">
 
 
           <h2>Set new password</h2>
@@ -48,22 +49,29 @@ export default function NewPassword({ Login, error }) {
 
 
 
-          <div className="form-group">
-            <input type="text" name="username" id="username" placeholder='Password' className='input-css' onChange={e => setDetails({ ...details, email: e.target.value })} value={details.email} required />
+          <div className="n-form-group">
+            <input type="password" name="password1" id="password1" placeholder='Password' className='input-css' onChange={e => setDetails({ ...details, email: e.target.value })} value={details.email} required />
           </div>
 
 
-          <div className="form-group">
-            <input type="email" name="email" id="email" placeholder='Confirm Password' className='input-css' onChange={e => setDetails({ ...details, password: e.target.value })} value={details.password} required/>
+          <div className="n-form-group">
+            <input type="password" name="password2" id="password2" placeholder='Confirm Password' className='input-css' onChange={e => setDetails({ ...details, password: e.target.value })} value={details.password} required/>
           </div>
 
 
           <div className="button">
+            {/* <Button
+              type="submit"
+              className="n-form-button"
+            > Reset Password
+            </Button> */}
+            <Link to={"/new"}>
             <Button
               type="submit"
-              className="form-button"
+              className="n-form-button"
             > Reset Password
             </Button>
+            </Link>
           </div>
           
 

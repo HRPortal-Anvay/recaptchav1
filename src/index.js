@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import './pages/ForgotPassword'
 import './pages/CheckEmail'
+import './pages/NewPassword'
+import './pages/PasswordReset'
 import App from './App';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import ForgotPassword from './pages/ForgotPassword'
 import CheckEmail from './pages/CheckEmail'
+import NewPassword from './pages/NewPassword'
+import PasswordReset from './pages/PasswordReset';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +23,8 @@ root.render(
       <Route path='/' element={<App />} />
       <Route path="/forgot" element={<ForgotPassword />} />
       <Route path="/checkemail" element={<CheckEmail />} />
+      <Route path="/reset" element={<NewPassword />} />
+      <Route path={"/new"} element={<PasswordReset />} />
     </Routes>
   </BrowserRouter>
 );
