@@ -8,7 +8,7 @@ form {
 }
 
 .form-button {
-  border-radius: none !important;
+  border-radius: 0 !important;
   color: black !important;
   border: none !important;
   background-color: rgb(217, 217, 217) !important;
