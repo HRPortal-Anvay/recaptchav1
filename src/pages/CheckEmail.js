@@ -24,11 +24,10 @@ export default function CheckEmail({ Login, error }) {
 
         <div className="form-inner">
 
-          <br /><br /> <br />
+          {/* <br /><br /> <br /> */}
 
           <h2>Check your Email</h2>
           <p>We sent a password reset link to abc@prissoft.net</p>
-
           <div className="button">
             <Button
               type="submit"
@@ -36,10 +35,10 @@ export default function CheckEmail({ Login, error }) {
             > Close
             </Button>
           </div>
-          <br /> <br />
+          <br /> 
           <div className="message">
-            Didn't recieve the email?
-            <a href="#">Click to resend</a>
+            Didn't recieve the email? 
+            <a href="#">&nbsp; Click to resend</a>
           </div>
 
         </div>
