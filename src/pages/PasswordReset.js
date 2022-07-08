@@ -21,7 +21,7 @@ export default function PasswordReset({ Login, error }) {
 
       <form onSubmit={submitHandler}>
 
-
+ 
         <div className="p-form-inner">
 
           <h2>Password has been reset</h2>
