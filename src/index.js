@@ -22,7 +22,7 @@ root.render(
     <Routes>
       <Route path='/' element={<App />} />
       <Route path="/forgot" element={<ForgotPassword />} />
-      <Route path="/checkemail" element={<CheckEmail />} />
+      <Route path="/check" element={<CheckEmail />} />
       <Route path="/reset" element={<NewPassword />} />
       <Route path={"/new"} element={<PasswordReset />} />
     </Routes>

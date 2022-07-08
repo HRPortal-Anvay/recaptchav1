@@ -50,7 +50,7 @@ export default function ForgotPassword({ Login, error }) {
               > Reset Password
               </Button> */}
 
-            <Link to={"/checkemail"}>
+            <Link to={"/check"}>
               <Button
                 type="submit"
                 className="f-form-button"
