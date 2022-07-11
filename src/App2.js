@@ -13,6 +13,7 @@ function App() {
   const [emailId, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [verified, setVerified] = useState(false)
+  const [success, setSuccess] = useState(false)
 
 
   const handleEmailId = (e) => {
@@ -34,13 +35,11 @@ function App() {
 
 
   const handleApi = () => {
-    // console.log({ emailId, password })
     axios.post('http://localhost:9092/token', {
       emailId: emailId,
       password: password
 
     })
-
 
       .then(result => {
 
@@ -49,10 +48,6 @@ function App() {
           console.log(result.data.token)
           localStorage.setItem('token', result.data.token)
           setVerified(true)
-
-
-
-
         }
 
       })
@@ -114,7 +109,7 @@ function App() {
                 &nbsp; Remember Me
               </div>
               <div className="forgot-password">
-                <a href="#">Forgot Password?</a>
+                <Link to={'/forgot'}>Forgot Password?</Link>
 
               </div>
             </div>
@@ -124,18 +119,26 @@ function App() {
             {(verified) ? (
 
               <div className="button">
-                <Link to={"/dashboard"}>
+                <Link to={"/dashboard"} disabled={!verified}>
                   <Button
                     onClick={handleApi}
                     type="submit"
+                    // disabled={!verified}
                     className='form-button'
                   > Login</Button></Link>
+                  {/* <Button
+                    onClick={handleApi}
+                    type="submit"
+                    disabled={!verified}
+                    className='form-button'
+                  ><Link to={"/dashboard"}>Login</Link></Button> */}
               </div>
             ) : (
               <div className="button">
                 <Button
                   onClick={handleApi}
                   type="submit"
+                  // disabled={!verified}
                   className='form-button'
                 >Login</Button>
               </div>

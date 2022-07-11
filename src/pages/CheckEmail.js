@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 
 export default function CheckEmail({ Login, error }) {
 
-  const [details, setDetails] = useState({ email: "", password: "" });
 
   const submitHandler = e => {
     e.preventDefault()

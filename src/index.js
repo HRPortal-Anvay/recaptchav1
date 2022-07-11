@@ -28,7 +28,7 @@ root.render(
       <Route path="/forgot" element={<ForgotPassword />} />
       <Route path="/check" element={<CheckEmail />} />
       <Route path="/reset" element={<NewPassword />} />
-      <Route path={"/new"} element={<PasswordReset />} />
+      <Route path="/new" element={<PasswordReset />} />
     </Routes>
   </BrowserRouter>
 );

@@ -70,7 +70,6 @@ export default function LoginForm({ Login, error }) {
                 &nbsp; Remember Me
               </div>
               <div className="forgot-password">
-                {/* <a href="#">Forgot Password?</a> */}
                 <Link to={"/forgot"}>Forgot Password?</Link>
 
               </div>
