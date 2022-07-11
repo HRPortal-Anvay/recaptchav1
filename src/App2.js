@@ -48,6 +48,7 @@ function App() {
           console.log(result.data.token)
           localStorage.setItem('token', result.data.token)
           setVerified(true)
+          console.log(result.config.data)
         }
 
       })
@@ -76,7 +77,9 @@ function App() {
                 value={emailId}
                 onChange={handleEmailId}
                 className='btn-css'
-                placeholder='Email' />
+                placeholder='Email'
+                required 
+              />
             </div>
 
             {/* insert Error */}
@@ -90,6 +93,7 @@ function App() {
                 onChange={handlePassword}
                 className='btn-css'
                 placeholder='Password'
+                required
               />
             </div>
 
