@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './LoginForm.css'
 import ReCAPTCHA from "react-google-recaptcha";
 import logo from '../images/ps-logo.png'
+import background from '../images/background.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
@@ -92,7 +93,8 @@ export default function LoginForm({ Login, error }) {
 
       <div className="col" id='right'>
         <div className="image">
-          <img src="https://aimint.org/ap/wp-content/uploads/sites/18/2016/04/image-placeholder-vertical.jpg" alt="img" />
+          {/* <img src="https://aimint.org/ap/wp-content/uploads/sites/18/2016/04/image-placeholder-vertical.jpg" alt="img" /> */}
+          <img src={background} alt="background"/>
         </div>
       </div>
 

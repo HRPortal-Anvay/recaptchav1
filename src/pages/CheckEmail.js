@@ -49,7 +49,7 @@ export default function CheckEmail({ Login, error }) {
           
           <div className="c-message">
             Didn't recieve the email? 
-            <a href="/checkemail">&nbsp; Click to resend</a>
+            <a href="/check">&nbsp; Click to resend</a>
           </div>
 
         </div>
