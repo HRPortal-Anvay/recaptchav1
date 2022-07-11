@@ -5,13 +5,16 @@ import './pages/ForgotPassword'
 import './pages/CheckEmail'
 import './pages/NewPassword'
 import './pages/PasswordReset'
-import App from './App';
+// import App from './App';
+import App from './App2';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import ForgotPassword from './pages/ForgotPassword'
 import CheckEmail from './pages/CheckEmail'
 import NewPassword from './pages/NewPassword'
 import PasswordReset from './pages/PasswordReset';
+import Dashboard from './pages/Dashboard';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,6 +24,7 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<App />} />
+      <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/forgot" element={<ForgotPassword />} />
       <Route path="/check" element={<CheckEmail />} />
       <Route path="/reset" element={<NewPassword />} />

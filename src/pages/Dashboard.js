@@ -10,6 +10,8 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
+import { Link } from 'react-router-dom';
+import './Dashboard.css'
 // import InputBase from '@mui/material/InputBase';
 // import Badge from '@mui/material/Badge';
 // import MenuIcon from '@mui/icons-material/Menu';
@@ -58,7 +60,7 @@ import Menu from '@mui/material/Menu';
 //   },
 // }));
 
-export default function PrimarySearchAppBar() {
+export default function Dashboard() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -82,10 +84,10 @@ export default function PrimarySearchAppBar() {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
-  const handleLogout = () => {
-    // setUser({ email: "" })
-    window.location.reload()
-  }
+  // const handleLogout = () => {
+  //   // setUser({ email: "" })
+  //   window.location.reload()
+  // }
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
     <Menu
@@ -104,7 +106,7 @@ export default function PrimarySearchAppBar() {
       onClose={handleMenuClose}
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleLogout}>Logout</MenuItem>
+      <Link to={'/'} id='logout'><MenuItem>Logout</MenuItem></Link>
     </Menu>
   );
 
@@ -164,7 +166,8 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <div className="dashboard" onLoad="alertUser('Welcome to this AMAZING web page!')">
+      <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
           {/* <IconButton
@@ -243,6 +246,9 @@ export default function PrimarySearchAppBar() {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
+      hello there
+      {/* Fill rest of Dashboard content from here */}
     </Box>
+    </div>
   );
 }

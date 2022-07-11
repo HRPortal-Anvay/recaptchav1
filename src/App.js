@@ -10,6 +10,8 @@ function App() {
     password: "admin123"
   }
 
+  //make specifications checking ONLY for password and display various Dashboards based on username
+  //criteria like "if name contains a U, then direct user to User Dashboard"
 
   const [user, setUser] = useState({ email: "" })
   const [error, setError] = useState("")
@@ -18,11 +20,9 @@ function App() {
     console.log(details)
 
     if (
-      //make specifications checking ONLY for password and display various Dashboards based on username
-      //criteria like "if name contains a U, then direct user to User Dashboard"
       details.email === adminUser.email &&
       details.password === adminUser.password
-    ) {
+       ) {
       console.log("Logged In.")
       setUser({
         email: details.email
@@ -31,7 +31,7 @@ function App() {
     } else {
       console.log("Details do not match a user!")
       setError("Invalid Email/Password")
-      
+
     }
   }
 
