@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
-
+// ** FILE NO LONGER IN USE **
 
 export default function LoginForm({ Login, error }) {
 
