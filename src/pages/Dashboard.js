@@ -93,29 +93,29 @@ export default function Dashboard() {
   return (
     <div className="dashboard">
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" className='navbar'>
+        <AppBar position="static" className='top'>
           <Toolbar>
             <a href="https://www.prissoft.net/" target="_blank" rel="noreferrer" className="logo">
-              <img src={logo} alt="logo" height={"30px"}
-              />
+              <img src={logo} alt="logo" height={"30px"}/>
             </a>
 
             <Box sx={{ flexGrow: 1 }} />
-            <Box className='pfp' sx={{ display: { xs: 'none', md: 'flex' } }}>
+              <Box className='pfp' sx={{ display: { xs: 'none', md: 'flex' } }}>
 
-              <IconButton
-                size="large"
-                edge="end"
-                aria-label="account of current user"
-                aria-controls={menuId}
-                aria-haspopup="true"
-                onClick={handleProfileMenuOpen}
-                color="inherit"
-                className='pfp'
-              >
-                <Avatar src="https://st2.depositphotos.com/1104517/11965/v/950/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg" alt="profile" max-height="100px" />
-              </IconButton>
-            </Box>
+                <IconButton
+                  size="large"
+                  edge="end"
+                  aria-label="account of current user"
+                  aria-controls={menuId}
+                  aria-haspopup="true"
+                  onClick={handleProfileMenuOpen}
+                  color="inherit"
+                  className='pfp'
+                >
+                  <Avatar src="https://st2.depositphotos.com/1104517/11965/v/950/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg" alt="profile" max-height="100px" />
+                </IconButton>
+              </Box>
+
             <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
               <IconButton
                 size="large"
@@ -124,11 +124,12 @@ export default function Dashboard() {
                 aria-haspopup="true"
                 onClick={handleMobileMenuOpen}
                 color="inherit"
-
+                className='mini'
               >
                 <MoreIcon />
               </IconButton>
             </Box>
+
           </Toolbar>
         </AppBar>
         {renderMobileMenu}
