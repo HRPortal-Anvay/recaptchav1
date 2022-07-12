@@ -4,7 +4,7 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import MenuItem from '@mui/material/MenuItem';
@@ -12,6 +12,7 @@ import Menu from '@mui/material/Menu';
 import { Link } from 'react-router-dom';
 import './Dashboard.css'
 import logo from '../images/ps-logo.png'
+import Sidebar from './Sidebar';
 
 export default function Dashboard() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -134,8 +135,9 @@ export default function Dashboard() {
         </AppBar>
         {renderMobileMenu}
         {renderMenu}
-        Dashboard
+        {/* Dashboard */}
         {/* Fill rest of Dashboard content from here */}
+        <Sidebar />
       </Box>
     </div>
   );
