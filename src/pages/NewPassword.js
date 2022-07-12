@@ -1,17 +1,19 @@
 import React, { useState } from 'react'
 import './NewPassword.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import PasswordStrength from './PasswordStrength'
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
 
 
+  
 
 export default function NewPassword({ Login, error }) {
 
   const [details, setDetails] = useState({ email: "", password: "" });
 
-
+  const [ password, setPassword ] = useState('');
 
 
 
@@ -46,25 +48,35 @@ export default function NewPassword({ Login, error }) {
             </ul>
           </div>
 
-
+          {/* <div className="n-form-group">
+            <input type="password" name="password1" id="password1" placeholder='Password' className='input-css' onChange={e => setDetails({ ...details, email: e.target.value })} value={details.email} required />
+            <div className="form-group mb-1"/>
+            <div className="right"/>
+          <input type="password"
+            className='input-css'
+            // className="form-control shadow-none "
+            id="password1"
+            placeholder='Password'
+            onChange={e => setPassword(e.target.value)}
+          /> */}
 
 
           <div className="n-form-group">
-            <input type="password" name="password1" id="password1" placeholder='Password' className='input-css' onChange={e => setDetails({ ...details, email: e.target.value })} value={details.email} required />
+          <input type="password"
+            className='input-css'
+            placeholder='Password'
+            onChange={e => setPassword(e.target.value)}
+          />
+            <PasswordStrength password={password} className='password'/>
           </div>
 
 
           <div className="n-form-group">
-            <input type="password" name="password2" id="password2" placeholder='Confirm Password' className='input-css' onChange={e => setDetails({ ...details, password: e.target.value })} value={details.password} required/>
+            <input type="password" name="password2" placeholder='Confirm Password' className='input-css' onChange={e => setDetails({ ...details, password: e.target.value })} value={details.password} required/>
           </div>
 
 
           <div className="button">
-            {/* <Button
-              type="submit"
-              className="n-form-button"
-            > Reset Password
-            </Button> */}
             <Link to={"/new"}>
             <Button
               type="submit"
@@ -74,7 +86,7 @@ export default function NewPassword({ Login, error }) {
             </Link>
           </div>
           
-
+          
         </div>
 
       </form>

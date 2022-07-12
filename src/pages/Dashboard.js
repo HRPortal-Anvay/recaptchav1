@@ -7,11 +7,11 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import MoreIcon from '@mui/icons-material/MoreVert';
-import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import { Link } from 'react-router-dom';
 import './Dashboard.css'
+import logo from '../images/ps-logo.png'
 
 export default function Dashboard() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -37,10 +37,6 @@ export default function Dashboard() {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
-  // const handleLogout = () => {
-  //   // setUser({ email: "" })
-  //   window.location.reload()
-  // }
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
     <Menu
@@ -80,7 +76,7 @@ export default function Dashboard() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-     
+
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           size="large"
@@ -89,9 +85,7 @@ export default function Dashboard() {
           aria-haspopup="true"
           color="inherit"
         >
-          <AccountCircle />
         </IconButton>
-        <p>Profile</p>
       </MenuItem>
     </Menu>
   );
@@ -99,71 +93,49 @@ export default function Dashboard() {
   return (
     <div className="dashboard">
       <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          {/* <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton> */}
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: 'none', sm: 'block' } }}
-          >
-            Portal
-          </Typography>
-          {/* <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search> */}
-          <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+        <AppBar position="static" className='navbar'>
+          <Toolbar>
+            <a href="https://www.prissoft.net/" target="_blank" rel="noreferrer" className="logo">
+              <img src={logo} alt="logo" height={"30px"}
+              />
+            </a>
 
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              {/* <AccountCircle /> */}
+            <Box sx={{ flexGrow: 1 }} />
+            <Box className='pfp' sx={{ display: { xs: 'none', md: 'flex' } }}>
 
+              <IconButton
+                size="large"
+                edge="end"
+                aria-label="account of current user"
+                aria-controls={menuId}
+                aria-haspopup="true"
+                onClick={handleProfileMenuOpen}
+                color="inherit"
+                className='pfp'
+              >
+                <Avatar src="https://st2.depositphotos.com/1104517/11965/v/950/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg" alt="profile" max-height="100px" />
+              </IconButton>
+            </Box>
+            <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+              <IconButton
+                size="large"
+                aria-label="show more"
+                aria-controls={mobileMenuId}
+                aria-haspopup="true"
+                onClick={handleMobileMenuOpen}
+                color="inherit"
 
-              <Avatar src="https://st2.depositphotos.com/1104517/11965/v/950/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg" className='pfp' alt="profile" max-height="100px" />
-            </IconButton>
-          </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </Box>
-        </Toolbar>
-      </AppBar>
-      {renderMobileMenu}
-      {renderMenu}
-      Dashboard
-      {/* Fill rest of Dashboard content from here */}
-    </Box>
+              >
+                <MoreIcon />
+              </IconButton>
+            </Box>
+          </Toolbar>
+        </AppBar>
+        {renderMobileMenu}
+        {renderMenu}
+        Dashboard
+        {/* Fill rest of Dashboard content from here */}
+      </Box>
     </div>
   );
 }
