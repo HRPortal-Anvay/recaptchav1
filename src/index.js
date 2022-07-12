@@ -5,8 +5,7 @@ import './pages/ForgotPassword'
 import './pages/CheckEmail'
 import './pages/NewPassword'
 import './pages/PasswordReset'
-// import App from './App';
-import App from './App2';
+import App from './App';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import ForgotPassword from './pages/ForgotPassword'

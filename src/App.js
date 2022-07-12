@@ -1,58 +1,161 @@
-import React, { useState } from "react";
-import LoginForm from "./components/LoginForm";
-import PrimarySearchAppBar from "./pages/PrimarySearchAppBar";
-import './App.css'
+import { useState } from 'react'
+import axios from "axios"
+import logo from './images/ps-logo.png'
+import background from './images/background.png'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import './components/LoginForm.css'
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 function App() {
+  const [emailId, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [verified, setVerified] = useState(false)
+  const [success, setSuccess] = useState(false)
 
-  const adminUser = {
-    email: "admin@prissoft.net",
-    password: "admin123"
+
+  const handleEmailId = (e) => {
+    setEmail(e.target.value)
   }
 
-  //make specifications checking ONLY for password and display various Dashboards based on username
-  //criteria like "if name contains a U, then direct user to User Dashboard"
+  const handlePassword = (e) => {
+    setPassword(e.target.value)
+  }
 
-  const [user, setUser] = useState({ email: "" })
-  const [error, setError] = useState("")
+  const submitHandler = e => {
+    e.preventDefault()
+  }
 
-  const Login = details => {
-    console.log(details)
+  const onChange = (value) => {
+    console.log("Captcha value: ", value)
+    // setVerified(true)
+  }
 
-    if (
-      details.email === adminUser.email &&
-      details.password === adminUser.password
-       ) {
-      console.log("Logged In.")
-      setUser({
-        email: details.email
+
+  const handleApi = () => {
+    axios.post('http://localhost:9092/token', {
+      emailId: emailId,
+      password: password
+
+    })
+
+      .then(result => {
+
+        if (result.data.token) {
+          console.log(result)
+          console.log(result.data.token)
+          localStorage.setItem('token', result.data.token)
+          setVerified(true)
+          console.log(result.config.data)
+        }
+
       })
-
-    } else {
-      console.log("Details do not match a user!")
-      setError("Invalid Email/Password")
-
-    }
+      .catch(error => {
+        console.log(error)
+      })
   }
 
   return (
-    <div className="App">
-      {(user.email !== "") ? (
-        <div className="welcome">
-          <div className="navbar">
-            <PrimarySearchAppBar />
+    <div className="login">
+      <div className="col" id="left">
+        <form onSubmit={submitHandler}>
+          <div className="form-inner">
+            <img src={logo} alt="logo" height="35px" />
+            <br /><br /><br />
+
+            <h2>Login</h2>
+            <p>Welcome! Please enter your details.</p>
+            <br />
+
+            <div className="form-group">
+              <input
+                type="email"
+                name='email'
+                id='email'
+                value={emailId}
+                onChange={handleEmailId}
+                className='btn-css'
+                placeholder='Email'
+                required 
+              />
+            </div>
+
+            {/* insert Error */}
+
+            <div className="form-group">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                value={password}
+                onChange={handlePassword}
+                className='btn-css'
+                placeholder='Password'
+                required
+              />
+            </div>
+
+            <div className="g-recaptcha" data-sitekey="6LcVfaMgAAAAAJ2zCFyaqSpK3FodWzhEsmqNgcwL">
+              <ReCAPTCHA
+                sitekey="6LcVfaMgAAAAAJ2zCFyaqSpK3FodWzhEsmqNgcwL"
+                onChange={onChange}
+                data-type="image"
+              />
+            </div>
+
+            <br />
+
+            <div className="extra-info">
+              <div className="remember">
+                <input type="checkbox" name="" id="" />
+                &nbsp; Remember Me
+              </div>
+              <div className="forgot-password">
+                <Link to={'/forgot'}>Forgot Password?</Link>
+
+              </div>
+            </div>
+
+            <br />
+
+            {(verified) ? (
+
+              <div className="button">
+                <Link to={"/dashboard"} disabled={!verified}>
+                  <Button
+                    onClick={handleApi}
+                    type="submit"
+                    // disabled={!verified}
+                    className='form-button'
+                  > Login</Button></Link>
+                  
+              </div>
+            ) : (
+              <div className="button">
+                <Button
+                  onClick={handleApi}
+                  type="submit"
+                  // disabled={!verified}
+                  className='form-button'
+                >Login</Button>
+              </div>
+            )}
+
           </div>
-          <br /><br />
-          <div className="content">
-            <h2>Welcome <span>{user.email.split("@")[0]}!</span>
-            </h2>
-          </div>
+        </form>
+      </div>
+
+      <div className="col" id='right'>
+        <div className="image">
+          <img src={background} alt="bgimage" />
         </div>
-      ) : (
-        <LoginForm Login={Login} error={error} />
-      )}
+      </div>
+
     </div>
-  );
+
+  )
 }
 
 export default App;
