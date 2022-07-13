@@ -19,12 +19,12 @@
   /* top: 15px; */
   display: flex;
   /* padding-right: 50px; */
-  background-color: blue;
+  /* background-color: blue; */
   
 }
 
 main {
-  width: 120rem;
+  width: 85rem;
   
   position: relative;
   top: 15px;
