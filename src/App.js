@@ -78,7 +78,7 @@ function App() {
                 onChange={handleEmailId}
                 className='btn-css'
                 placeholder='Email'
-                required 
+                required
               />
             </div>
 
@@ -142,6 +142,7 @@ function App() {
                 >Login</Button>
               </div>
             )}
+
 
           </div>
         </form>

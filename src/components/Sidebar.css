@@ -14,10 +14,12 @@
 
 .container {
   position: relative;
+  margin-right: 0;
+  width: 100vw;
   /* top: 15px; */
   display: flex;
   /* padding-right: 50px; */
-  /* background-color: blue; */
+  background-color: blue;
   
 }
 
@@ -26,14 +28,14 @@ main {
   
   position: relative;
   top: 15px;
-  left: 15px;
-  /* background-color: red; */
+  margin-left: 15px;
+  background-color: red;
 }
 
 .sidebar {
   position: relative;
   top: 15px;
-  margin-left: -72px;
+  margin-left: -132px;
   background: #000;
   color: #fff;
   height: 90vh;
