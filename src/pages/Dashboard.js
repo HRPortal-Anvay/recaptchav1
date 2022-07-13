@@ -12,7 +12,7 @@ import Menu from '@mui/material/Menu';
 import { Link } from 'react-router-dom';
 import './Dashboard.css'
 import logo from '../images/ps-logo.png'
-import Sidebar from './Sidebar';
+import Sidebar from '../components/Sidebar';
 
 export default function Dashboard() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -135,7 +135,6 @@ export default function Dashboard() {
         </AppBar>
         {renderMobileMenu}
         {renderMenu}
-        {/* Dashboard */}
         {/* Fill rest of Dashboard content from here */}
         <Sidebar />
       </Box>
