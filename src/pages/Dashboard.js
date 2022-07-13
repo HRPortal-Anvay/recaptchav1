@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 import './Dashboard.css'
 import logo from '../images/ps-logo.png'
 import Sidebar from '../components/Sidebar';
+import pfp from '../images/pfp.jpeg'
 
 export default function Dashboard() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -113,7 +114,7 @@ export default function Dashboard() {
                   color="inherit"
                   className='pfp'
                 >
-                  <Avatar src="https://st2.depositphotos.com/1104517/11965/v/950/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg" alt="profile" max-height="100px" />
+                  <Avatar src={pfp} alt="profile" max-height="100px" />
                 </IconButton>
               </Box>
 

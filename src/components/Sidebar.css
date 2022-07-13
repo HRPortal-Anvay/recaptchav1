@@ -20,16 +20,14 @@
   display: flex;
   /* padding-right: 50px; */
   /* background-color: blue; */
-  
 }
 
 main {
   width: 85rem;
-  
   position: relative;
   top: 15px;
   margin-left: 15px;
-  background-color: red;
+  background-color: white;
 }
 
 .sidebar {
@@ -65,17 +63,20 @@ main {
   padding: 10px 15px;
   gap: 15px;
   transition: all 0.5s;
+  text-decoration: none;
 }
 
 .link:hover {
   background: lightskyblue;
   color: #000;
   transition: all 0.5s;
+  text-decoration: none;
 }
 
 .active {
   background: lightskyblue;
   color: #000;
+  text-decoration: none;
 }
 
 .icon,

@@ -7,7 +7,6 @@
 //   CDBSidebarMenuItem,
 // } from 'cdbreact';
 // import { NavLink } from 'react-router-dom';
-import './Sidebar.css'
 
 // const Sidebar = () => {
 //   return (
@@ -56,6 +55,7 @@ import './Sidebar.css'
 
 // export default Sidebar;
 
+import './Sidebar.css'
 import React, { useState } from 'react';
 import {
     FaTh,
@@ -67,6 +67,7 @@ import {
     FaThList
 }from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
+import pfp from '../images/pfp.jpeg'
 
 
 const Sidebar = ({children}) => {
@@ -108,8 +109,9 @@ const Sidebar = ({children}) => {
         <div className="container">
            <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
                <div className="top_section">
-                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Logo</h1>
-                   <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
+                   {/* <img src={pfp} alt="pfp" style={{display: isOpen ? "block" : "none"}} height="80px"/> */}
+                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Name</h1>
+                   <div style={{marginLeft: isOpen ? "30px" : "0px"}} className="bars">
                        <FaBars onClick={toggle}/>
                    </div>
                </div>
