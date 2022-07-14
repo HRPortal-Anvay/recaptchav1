@@ -27,7 +27,7 @@ main {
   position: relative;
   top: 15px;
   margin-left: 15px;
-  background-color: white;
+  background-color: rgb(255, 180, 180);
 }
 
 .sidebar {
