@@ -78,7 +78,7 @@ function App() {
                 onChange={handleEmailId}
                 className='btn-css'
                 placeholder='Email'
-                required 
+                required
               />
             </div>
 
@@ -114,7 +114,6 @@ function App() {
               </div>
               <div className="forgot-password">
                 <Link to={'/forgot'}>Forgot Password?</Link>
-
               </div>
             </div>
 
@@ -130,7 +129,6 @@ function App() {
                     // disabled={!verified}
                     className='form-button'
                   > Login</Button></Link>
-                  
               </div>
             ) : (
               <div className="button">
@@ -142,6 +140,7 @@ function App() {
                 >Login</Button>
               </div>
             )}
+
 
           </div>
         </form>

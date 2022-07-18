@@ -4,7 +4,7 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-// import Typography from '@mui/material/Typography';
+import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import MenuItem from '@mui/material/MenuItem';
@@ -12,7 +12,8 @@ import Menu from '@mui/material/Menu';
 import { Link } from 'react-router-dom';
 import './Dashboard.css'
 import logo from '../images/ps-logo.png'
-import Sidebar from './Sidebar';
+import Sidebar from '../components/Sidebar';
+import pfp from '../images/pfp.jpeg'
 
 export default function Dashboard() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -97,26 +98,35 @@ export default function Dashboard() {
         <AppBar position="static" className='top'>
           <Toolbar>
             <a href="https://www.prissoft.net/" target="_blank" rel="noreferrer" className="logo">
-              <img src={logo} alt="logo" height={"30px"}/>
+              <img src={logo} alt="logo" height={"30px"} />
             </a>
-
+            {/* <Box>
+              <Typography
+                variant="h6"
+                noWrap
+                component="div"
+                sx={{ display: { xs: 'none', sm: 'block' }, color: "black", textAlign: "center" }}
+              >
+                MUI
+              </Typography>
+            </Box> */}
             <Box sx={{ flexGrow: 1 }} />
-              <Box className='pfp' sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <Box className='pfp' sx={{ display: { xs: 'none', md: 'flex' } }}>
 
-                <IconButton
-                  size="large"
-                  edge="end"
-                  aria-label="account of current user"
-                  aria-controls={menuId}
-                  aria-haspopup="true"
-                  onClick={handleProfileMenuOpen}
-                  color="inherit"
-                  className='pfp'
-                >
-                  <Avatar src="https://st2.depositphotos.com/1104517/11965/v/950/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg" alt="profile" max-height="100px" />
-                </IconButton>
-              </Box>
-
+              <IconButton
+                size="large"
+                edge="end"
+                aria-label="account of current user"
+                aria-controls={menuId}
+                aria-haspopup="true"
+                onClick={handleProfileMenuOpen}
+                color="inherit"
+                className='pfp'
+              >
+                <Avatar src={pfp} alt="profile" max-height="100px" />
+              </IconButton>
+            </Box>
+           
             <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
               <IconButton
                 size="large"
@@ -135,7 +145,6 @@ export default function Dashboard() {
         </AppBar>
         {renderMobileMenu}
         {renderMenu}
-        {/* Dashboard */}
         {/* Fill rest of Dashboard content from here */}
         <Sidebar />
       </Box>
