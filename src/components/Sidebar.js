@@ -67,7 +67,8 @@ import {
     FaThList
 }from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
-import pfp from '../images/pfp.jpeg'
+import pfp from '../images/pfp.png'
+import Features from './Features';
 
 
 const Sidebar = ({children}) => {
@@ -75,33 +76,33 @@ const Sidebar = ({children}) => {
     const toggle = () => setIsOpen (!isOpen);
     const menuItem=[
         {
-            path:"/",
+            path:"/dashboard",
             name:"Dashboard",
             icon:<FaTh/>
         },
         {
-            path:"/about",
-            name:"About",
+            path:"/#",
+            name:"Role Management",
             icon:<FaUserAlt/>
         },
         {
             path:"/analytics",
-            name:"Analytics",
+            name:"xxxxxxxxxx",
             icon:<FaRegChartBar/>
         },
         {
             path:"/comment",
-            name:"Comment",
+            name:"xxxxxxxxxx",
             icon:<FaCommentAlt/>
         },
         {
             path:"/product",
-            name:"Product",
+            name:"xxxxxxxxxx",
             icon:<FaShoppingBag/>
         },
         {
             path:"/productList",
-            name:"Product List",
+            name:"xxxxxxxxxx",
             icon:<FaThList/>
         }
     ]
@@ -109,7 +110,7 @@ const Sidebar = ({children}) => {
         <div className="container">
            <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
                <div className="top_section">
-                   {/* <img src={pfp} alt="pfp" style={{display: isOpen ? "block" : "none"}} height="80px"/> */}
+                   <img src={pfp} alt="pfp" style={{display: isOpen ? "block" : "none"}} className = "pfp" height="80px"/>
                    <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Name</h1>
                    <div style={{marginLeft: isOpen ? "30px" : "0px"}} className="bars">
                        <FaBars onClick={toggle}/>
@@ -124,7 +125,10 @@ const Sidebar = ({children}) => {
                    ))
                }
            </div>
-           <main>{children}</main>
+           <main>
+            {/* {children} */}
+            <Features />
+            </main>
         </div>
     );
 };
