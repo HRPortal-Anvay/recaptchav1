@@ -56,6 +56,7 @@ const Sidebar = ({children}) => {
                <div className="top_section">
                    <img src={pfp} alt="pfp" style={{display: "block"}} className = "pfp" height="80px"/>
                    <h1 style={{display: "block"}} className="logo">Welcome</h1>
+                   <p></p>
                    {/* <div style={{marginLeft: "30px"}} className="bars">
                        <FaUserAlt onClick={toggle}/>
                    </div> */}

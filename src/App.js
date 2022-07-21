@@ -5,12 +5,11 @@ import background from './images/background.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
-// import './components/LoginForm.css'
-import './App.css';
+import './App.css'
 import ReCAPTCHA from "react-google-recaptcha";
 
 
-function App() {
+function LoginForm() {
   const [emailId, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [verified, setVerified] = useState(false)
@@ -161,4 +160,5 @@ function App() {
   )
 }
 
-export default App;
+
+export default LoginForm;
