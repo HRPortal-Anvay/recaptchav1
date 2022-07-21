@@ -5,7 +5,8 @@ import background from './images/background.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
-import './components/LoginForm.css'
+// import './components/LoginForm.css'
+import './App.css';
 import ReCAPTCHA from "react-google-recaptcha";
 
 
@@ -13,7 +14,7 @@ function App() {
   const [emailId, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [verified, setVerified] = useState(false)
-  const [success, setSuccess] = useState(false)
+  // const [success, setSuccess] = useState(false)
 
   let navigate = useNavigate();
 
@@ -126,21 +127,19 @@ function App() {
             {(verified) ? (
 
               <div className="button">
-                {/* <Link to={"/dashboard"} disabled={!verified}> */}
                   <Button
                     onClick={handleApi}
                     type="submit"
-                    // disabled={!verified}
+                    disabled={!verified}
                     className='form-button'
                   > Login</Button>
-                  {/* </Link> */}
               </div>
             ) : (
               <div className="button">
                 <Button
                   onClick={handleApi}
                   type="submit"
-                  // disabled={!verified}
+                  disabled={!verified}
                   className='form-button'
                 >Login</Button>
               </div>

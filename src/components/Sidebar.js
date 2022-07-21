@@ -1,6 +1,6 @@
 
 import './Sidebar.css'
-import React, { useState } from 'react';
+import React from 'react';
 // import {
 //     FaTh,
 //     FaBars,
@@ -57,7 +57,7 @@ const Sidebar = ({children}) => {
                    <img src={pfp} alt="pfp" style={{display: "block"}} className = "pfp" height="80px"/>
                    <h1 style={{display: "block"}} className="logo">Welcome</h1>
                    {/* <div style={{marginLeft: "30px"}} className="bars">
-                       <FaBars onClick={toggle}/>
+                       <FaUserAlt onClick={toggle}/>
                    </div> */}
                </div>
                {
