@@ -1,0 +1,56 @@
+/* .box {
+  background-color: red;
+}
+
+.form-full {
+  position: relative;
+  left: 35%;
+  color: black !important;
+}
+
+.dropdown {
+  position: relative;
+  color: black !important;
+  margin-bottom: 0;
+}
+
+.dropdown, .options {
+  margin-top: 2%;
+}
+
+.options{
+  background-color: rgb(217,217,217);
+  width: 11%;
+  border: none !important;
+  border-color: red;
+  border-radius: 0;
+  color: black;
+  position: relative;
+} */
+
+
+.r-roles {
+  /* background-color: red; */
+  width: 100%;
+}
+
+.r-form {
+  /* background-color: blue; */
+  max-width: fit-content;
+  margin: 0;
+  padding: 0 !important;
+  position: relative;
+
+  
+}
+
+.r-list {
+  /* background-color: yellow; */
+  background-color: rgb(217,217,217);
+  width: 110px;
+  padding-left: 7px;
+  position: absolute;
+  bottom: 40px;
+  left: 25rem;
+  
+}

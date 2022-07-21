@@ -15,6 +15,7 @@ import './Dashboard.css'
 import logo from '../images/ps-logo.png'
 import Sidebar from '../components/Sidebar';
 import pfp from '../images/pfp.jpeg'
+import Features from '../components/Features';
 
 
 export default function Dashboard() {
