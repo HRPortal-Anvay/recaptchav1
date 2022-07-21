@@ -13,11 +13,11 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import pfp from '../images/pfp.png'
 import Features from './Features';
+import axios from 'axios';
 
 
 const Sidebar = ({children}) => {
-    // const[isOpen ,setIsOpen] = useState(false);
-    // const toggle = () => setIsOpen (!isOpen);
+    // const[isOpen ,setIsOpen] = useState(false); const toggle = () => setIsOpen (!isOpen);
     const menuItem=[
         {
             path:"/dashboard",
@@ -50,6 +50,9 @@ const Sidebar = ({children}) => {
             // icon:<FaThList/>
         }
     ]
+
+
+
     return (
         <div className="container">
            <div  className="sidebar">
@@ -71,7 +74,7 @@ const Sidebar = ({children}) => {
                }
            </div>
            <main>
-            {/* {children} */}
+            {children}
             <Features />
             </main>
         </div>
