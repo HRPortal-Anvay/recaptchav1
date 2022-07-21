@@ -4,9 +4,11 @@
 }
 
 .dashboard {
-  background-color: rgb(245, 245, 245);
-  /* background-color: blue; */
-  height: 100vh;
+  /* background-color: #d9d9d94a; */
+  background-color: blue;
+  height: 103.2vh;
+  /* height: 50rem; */
+  /* height: 100%; */
   text-align: center;
 }
 

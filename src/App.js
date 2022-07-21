@@ -3,9 +3,10 @@ import axios from "axios"
 import logo from './images/ps-logo.png'
 import background from './images/background.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
-import './components/LoginForm.css'
+// import './components/LoginForm.css'
+import './App.css';
 import ReCAPTCHA from "react-google-recaptcha";
 
 
@@ -13,7 +14,9 @@ function App() {
   const [emailId, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [verified, setVerified] = useState(false)
-  const [success, setSuccess] = useState(false)
+  // const [success, setSuccess] = useState(false)
+
+  let navigate = useNavigate();
 
 
   const handleEmailId = (e) => {
@@ -30,7 +33,7 @@ function App() {
 
   const onChange = (value) => {
     console.log("Captcha value: ", value)
-    // setVerified(true)
+    setVerified(true)
   }
 
 
@@ -49,6 +52,8 @@ function App() {
           localStorage.setItem('token', result.data.token)
           setVerified(true)
           console.log(result.config.data)
+          // window.location.href="/dashboard"
+          navigate("/dashboard");
         }
 
       })
@@ -97,7 +102,7 @@ function App() {
               />
             </div>
 
-            <div className="g-recaptcha" data-sitekey="6LcVfaMgAAAAAJ2zCFyaqSpK3FodWzhEsmqNgcwL">
+            <div className="g-recaptcha" data-sitekey="6LcVfaMgAAAAAJ2zCFyaqSpK3FodWzhEsmqNgcwL" >
               <ReCAPTCHA
                 sitekey="6LcVfaMgAAAAAJ2zCFyaqSpK3FodWzhEsmqNgcwL"
                 onChange={onChange}
@@ -122,20 +127,19 @@ function App() {
             {(verified) ? (
 
               <div className="button">
-                <Link to={"/dashboard"} disabled={!verified}>
                   <Button
                     onClick={handleApi}
                     type="submit"
-                    // disabled={!verified}
+                    disabled={!verified}
                     className='form-button'
-                  > Login</Button></Link>
+                  > Login</Button>
               </div>
             ) : (
               <div className="button">
                 <Button
                   onClick={handleApi}
                   type="submit"
-                  // disabled={!verified}
+                  disabled={!verified}
                   className='form-button'
                 >Login</Button>
               </div>

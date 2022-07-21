@@ -15,7 +15,8 @@
 .container {
   position: relative;
   margin-right: 0;
-  width: 100vw;
+
+  width: 100%;
   /* top: 15px; */
   display: flex;
   /* padding-right: 50px; */
@@ -23,21 +24,18 @@
 }
 
 main {
-  width: 85rem;
-  position: relative;
-  top: 15px;
-  margin-left: 15px;
-  background-color: rgb(255, 180, 180);
-}
+  width: 100%;
+  height: auto;
+} 
 
 .sidebar {
   position: relative;
-  top: 15px;
-  margin-left: -132px;
-  background: #000;
-  color: #fff;
-  height: 90vh;
-  /* width: 250px !important; */
+  top: 14px;
+  margin-left: -110px;
+  background-color: #d9d9d9;
+  /* color: #fff; */
+  height: 90.4vh;
+  width: 20% !important;
   transition: all 0.2s;
 }
 
@@ -45,10 +43,6 @@ main {
   display: flex;
   align-items: center;
   padding: 20px 15px;
-}
-
-.logo {
-  font-size: 30px;
 }
 
 .bars {
@@ -59,7 +53,7 @@ main {
 
 .link {
   display: flex;
-  color: #fff;
+  background-color:#d9d9d9;
   padding: 10px 15px;
   gap: 15px;
   transition: all 0.5s;
@@ -67,15 +61,15 @@ main {
 }
 
 .link:hover {
-  background: lightskyblue;
-  color: #000;
+  background-color: #d9d9d9;
+
   transition: all 0.5s;
   text-decoration: none;
 }
 
 .active {
-  background: lightskyblue;
-  color: #000;
+  background: #d9d9d9;
+  
   text-decoration: none;
 }
 
@@ -88,5 +82,9 @@ main {
 }
 
 .logo {
-  font-size: 10px;
+  font-size: 15px;
+}
+
+.link_text{
+color: black;  
 }

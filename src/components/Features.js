@@ -1,48 +1,66 @@
 import React from 'react'
 import './Features.css'
 
-export default function Features() {
+
+
+function Features() {
   return (
-    <div className='container-0'>
-      {/* <div className='item' id='item-1'>
-        Welcome
-        <br />
-        <br />
-        <br />
-        <strong>HR</strong>
-        <p className='dashbord'>Dashbord</p>
-      </div> */}
+    <div className='container1'>
 
-      <div className='container-1'>
-        <div className='item' id='item-2'>New Joinings</div>
-        <div className='item' id='item-3'>Sticky Notes</div>
+    <div className="left-container">
+      <div className="top-row">
+        <div className="row1">
+          <div className="new-jonings">
+            New Joinings
+          </div>
+          <div className="sticky-notes">
+            Sricky Notes
+          </div>
+        </div>
+        <div className="row2">
+          <div className="holidays">
+            Holidays
+          </div>
+          <div className="birthday">
+            Birthday & Anniversary
+          </div>
+        </div>
 
-        <div className='item' id='item-6'>Holiday</div>
-        <div className='item' id='item-7'>Birthday & Anniversary</div>
       </div>
 
-      <div className='container-2'>
-        <div className='item' id='item-9' >pending Reviews</div>
+      <div className="bottom-row">
+        <div className="pending-review">
+          Pending Reviews
+        </div>
       </div>
-
-
-
-
-
-      <div className='container-3'>
-        <div className='item' id='item-4'>On Leave</div>
-        <div className='item' id='item-8'>Leave Application status</div>
-        <div className='item' id='item-10' >Pending Actions</div>
-      </div>
-
-      <div className='container-4'>
-        <div className='item' id='item-5'>Employee of the month</div>
-        <div className='item' id='item-11'>Announcement</div>
-      </div>
-
     </div>
 
+    <div className="right-container">
+      <div className="left-col">
+        <div className="on-leave">
+          On Leave
+        </div>
+        <div className="leave-application">
+          Leave Application
+        </div>
+        <div className="pending-action">
+          Pending Actions
+        </div>
+      </div>
 
+
+      <div className="right-col">
+        <div className='employee'>
+          Employee of the month
+        </div>
+        <div className='aanncouncement'>
+          Announcement
+        </div>
+      </div>
+    </div>
+  </div>
   )
 }
+
+export default Features
 
