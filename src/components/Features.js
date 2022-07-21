@@ -10,11 +10,11 @@ function Features() {
     <div className="left-container">
       <div className="top-row">
         <div className="row1">
-          <div className="new-jonings">
+          <div className="new-joinings">
             New Joinings
           </div>
           <div className="sticky-notes">
-            Sricky Notes
+            Sticky Notes
           </div>
         </div>
         <div className="row2">
