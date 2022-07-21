@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 // import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -15,6 +16,7 @@ import logo from '../images/ps-logo.png'
 import Sidebar from '../components/Sidebar';
 import pfp from '../images/pfp.jpeg'
 
+
 export default function Dashboard() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -25,6 +27,12 @@ export default function Dashboard() {
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
+  // useEffect(() => {
+  //   if (!sessionStorage.getItem("token")) {
+  //     window.location.href="/dashboard"
+  //   } 
+  // });
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
