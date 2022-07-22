@@ -5,13 +5,17 @@ import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 
 export default function Roles() {
 
-
+  function selectedRole() {
+    var mylist = document.getElementById("r-list");
+    document.getElementById("role").value = mylist.options[mylist.selectedIndex].text;
+    console.log(mylist.options[mylist.selectedIndex].text)
+  }
 
   return (
     <div className="r-roles">
 
       <form className='r-form'>
-        <select className='r-list' placeholder='Select Role'>
+        <select className='r-list' id='r-list' onChange={selectedRole}>
           <option>  </option>
           <option> HR </option>
           <option> Admin </option>
@@ -25,7 +29,22 @@ export default function Roles() {
       <button className='plus-btn'>
         <FontAwesomeIcon icon={faCirclePlus} className="plus" size='2x' />
       </button>
-      <hr className='hr'/>
+      <hr className='hr' />
+
+      <div className="role-name">
+        <ul className='flex-container space-between'>
+          <li className='flex-item'>Role Name:</li>
+          <li>
+            <input type="text" id="role" size="20" className='flex-item'/>
+          </li>
+        </ul>
+      </div>
+
+
+
+
+
+
 
     </div>
   )

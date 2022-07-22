@@ -71,3 +71,26 @@
 .hr {
   width: 101%;
 }
+
+.role-name {
+  /* border: 3px dashed blue; */
+  width: 35%;
+  position: relative;
+  left: 1%;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+.space-between { 
+  justify-content: space-between; 
+}  
+
+input[type=text] {
+  background-color: rgb(217,217,217);
+  border: none;
+  padding-left: 5%;
+}
