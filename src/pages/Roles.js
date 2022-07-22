@@ -1,11 +1,15 @@
 import React from 'react'
 import './Roles.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 
 export default function Roles() {
-  
-  
+
+
+
   return (
     <div className="r-roles">
+
       <form className='r-form'>
         <select className='r-list' placeholder='Select Role'>
           <option>  </option>
@@ -13,8 +17,16 @@ export default function Roles() {
           <option> Admin </option>
           <option> Manager </option>
           <option> Employee </option>
+          <option> xxxxxxxxxx </option>
+          <option> xxxxxxxxxxxx </option>
         </select>
       </form>
+
+      <button className='plus-btn'>
+        <FontAwesomeIcon icon={faCirclePlus} className="plus" size='2x' />
+      </button>
+      <hr className='hr'/>
+
     </div>
   )
 }

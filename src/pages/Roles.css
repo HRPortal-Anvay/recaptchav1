@@ -38,7 +38,7 @@
   /* background-color: blue; */
   max-width: fit-content;
   margin: 0;
-  padding: 0 !important;
+  padding: 35px;
   position: relative;
 
   
@@ -50,7 +50,24 @@
   width: 110px;
   padding-left: 7px;
   position: absolute;
-  bottom: 40px;
+  bottom: 105%;
   left: 25rem;
+  border: none;
   
+}
+
+
+.plus-btn {
+  border: none;
+  background-color: none;
+  height: 0;
+  border-radius: 100%;
+  position: relative;
+  bottom: 20px;
+  right: 2%;
+
+}
+
+.hr {
+  width: 101%;
 }
