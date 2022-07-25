@@ -23,146 +23,150 @@ export default function RoleAccordion() {
         <AccordionDetails>
 
           <div className="checkboxes">
-          <FormGroup aria-label="position" row>
-            <FormControlLabel
-              value="end"
-              control={<Checkbox />}
-              label="Feature 1"
-              labelPlacement="end"
-              className="box"
-            />
-          </FormGroup>
-          <FormGroup aria-label="position" row>
-            <FormControlLabel
-              value="end"
-              control={<Checkbox />}
-              label="Feature 2"
-              labelPlacement="end"
-              className="box"
-            />
-          </FormGroup>
-          <FormGroup aria-label="position" row>
-            <FormControlLabel
-              value="end"
-              control={<Checkbox />}
-              label="Feature 3"
-              labelPlacement="end"
-              className="box"
-            />
-          </FormGroup>
-          <FormGroup aria-label="position" row>
-            <FormControlLabel
-              value="end"
-              control={<Checkbox />}
-              label="Feature 4"
-              labelPlacement="end"
-              className="box"
-            />
-          </FormGroup>
-          <FormGroup aria-label="position" row>
-            <FormControlLabel
-              value="end"
-              control={<Checkbox />}
-              label="Feature 5 &nbsp;"
-              labelPlacement="end"
-              className="box"
-            />
-          </FormGroup>
-          <div className="break"></div>
-          <FormGroup aria-label="position" row>
-            <FormControlLabel
-              value="end"
-              control={<Checkbox />}
-              label="Feature 6"
-              labelPlacement="end"
-              className="box"
-            />
-          </FormGroup>
-          <FormGroup aria-label="position" row>
-            <FormControlLabel
-              value="end"
-              control={<Checkbox />}
-              label="Feature 7"
-              labelPlacement="end"
-              className="box"
-            />
-          </FormGroup>
-          <FormGroup aria-label="position" row>
-            <FormControlLabel
-              value="end"
-              control={<Checkbox />}
-              label="Feature 8"
-              labelPlacement="end"
-              className="box"
-            />
-          </FormGroup>
-          <FormGroup aria-label="position" row>
-            <FormControlLabel
-              value="end"
-              control={<Checkbox />}
-              label="Feature 9"
-              labelPlacement="end"
-              className="box"
-            />
-          </FormGroup>
-          <FormGroup aria-label="position" row>
-            <FormControlLabel
-              value="end"
-              control={<Checkbox />}
-              label="Feature 10"
-              labelPlacement="end"
-              className="box"
-            />
-          </FormGroup>
-          <div className="break"></div>
-          <FormGroup aria-label="position" row>
-            <FormControlLabel
-              value="end"
-              control={<Checkbox />}
-              label="Feature 11"
-              labelPlacement="end"
-              className="box"
-            />
-          </FormGroup>
-          <FormGroup aria-label="position" row>
-            <FormControlLabel
-              value="end"
-              control={<Checkbox />}
-              label="Feature 12"
-              labelPlacement="end"
-              className="box"
-            />
-          </FormGroup>
-          <FormGroup aria-label="position" row>
-            <FormControlLabel
-              value="end"
-              control={<Checkbox />}
-              label="Feature 13"
-              labelPlacement="end"
-              className="box"
-            />
-          </FormGroup>
-          <FormGroup aria-label="position" row>
-            <FormControlLabel
-              value="end"
-              control={<Checkbox />}
-              label="Feature 14"
-              labelPlacement="end"
-              className="box"
-            />
-          </FormGroup>
-          <FormGroup aria-label="position" row>
-            <FormControlLabel
-              value="end"
-              control={<Checkbox />}
-              label="Feature 15"
-              labelPlacement="end"
-              className="box"
-            />
-          </FormGroup>
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                value="end"
+                control={<Checkbox />}
+                label="Feature 1"
+                labelPlacement="end"
+                className="box"
+              />
+            </FormGroup>
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                value="end"
+                control={<Checkbox />}
+                label="Feature 2"
+                labelPlacement="end"
+                className="box"
+              />
+            </FormGroup>
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                value="end"
+                control={<Checkbox />}
+                label="Feature 3"
+                labelPlacement="end"
+                className="box"
+              />
+            </FormGroup>
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                value="end"
+                control={<Checkbox />}
+                label="Feature 4"
+                labelPlacement="end"
+                className="box"
+              />
+            </FormGroup>
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                value="end"
+                control={<Checkbox />}
+                label="Feature 5 &nbsp;"
+                labelPlacement="end"
+                className="box"
+              />
+            </FormGroup>
+            
+            <div className="break"></div>
+
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                value="end"
+                control={<Checkbox />}
+                label="Feature 6"
+                labelPlacement="end"
+                className="box"
+              />
+            </FormGroup>
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                value="end"
+                control={<Checkbox />}
+                label="Feature 7"
+                labelPlacement="end"
+                className="box"
+              />
+            </FormGroup>
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                value="end"
+                control={<Checkbox />}
+                label="Feature 8"
+                labelPlacement="end"
+                className="box"
+              />
+            </FormGroup>
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                value="end"
+                control={<Checkbox />}
+                label="Feature 9"
+                labelPlacement="end"
+                className="box"
+              />
+            </FormGroup>
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                value="end"
+                control={<Checkbox />}
+                label="Feature 10"
+                labelPlacement="end"
+                className="box"
+              />
+            </FormGroup>
+
+            <div className="break"></div>
+
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                value="end"
+                control={<Checkbox />}
+                label="Feature 11"
+                labelPlacement="end"
+                className="box"
+              />
+            </FormGroup>
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                value="end"
+                control={<Checkbox />}
+                label="Feature 12"
+                labelPlacement="end"
+                className="box"
+              />
+            </FormGroup>
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                value="end"
+                control={<Checkbox />}
+                label="Feature 13"
+                labelPlacement="end"
+                className="box"
+              />
+            </FormGroup>
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                value="end"
+                control={<Checkbox />}
+                label="Feature 14"
+                labelPlacement="end"
+                className="box"
+              />
+            </FormGroup>
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                value="end"
+                control={<Checkbox />}
+                label="Feature 15"
+                labelPlacement="end"
+                className="box"
+              />
+            </FormGroup>
 
           </div>
-          
+
 
         </AccordionDetails>
       </Accordion>
@@ -176,10 +180,36 @@ export default function RoleAccordion() {
           <Typography>Leave Management</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
+          <div className="checkboxes">
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                value="end"
+                control={<Checkbox />}
+                label="Feature 1"
+                labelPlacement="end"
+                className="box"
+              />
+            </FormGroup>
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                value="end"
+                control={<Checkbox />}
+                label="Feature 2"
+                labelPlacement="end"
+                className="box"
+              />
+            </FormGroup>
+            <FormGroup aria-label="position" row>
+              <FormControlLabel
+                value="end"
+                control={<Checkbox />}
+                label="Feature 3"
+                labelPlacement="end"
+                className="box"
+              />
+            </FormGroup>
+          </div>
+
         </AccordionDetails>
       </Accordion>
     </div>
