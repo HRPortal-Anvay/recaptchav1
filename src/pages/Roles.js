@@ -2,6 +2,8 @@ import React from 'react'
 import './Roles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
+import RoleAccordion from '../components/RoleAccordion';
+
 
 export default function Roles() {
 
@@ -39,12 +41,8 @@ export default function Roles() {
           </li>
         </ul>
       </div>
-
-
-
-
-
-
+<br /> <br />
+        <RoleAccordion />
 
     </div>
   )

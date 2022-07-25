@@ -19,7 +19,7 @@ import Roles from '../pages/Roles';
 
 const Sidebar = (
     // { children }
-    ) => {
+) => {
     // const[isOpen ,setIsOpen] = useState(false); const toggle = () => setIsOpen (!isOpen);
     const menuItem = [
         {
@@ -58,7 +58,7 @@ const Sidebar = (
 
     return (
         <div className="container">
-            <div className="sidebar">
+            <div className="sidebar" >
                 <div className="top_section">
                     <img src={pfp} alt="pfp" style={{ display: "block" }} className="pfp" height="80px" />
                     <div className="welcome">
@@ -70,8 +70,11 @@ const Sidebar = (
                     <h6>HR</h6>
                     {
                         menuItem.map((item, index) => (
-                            <NavLink to={item.path} key={index} className="link" activeclassName="active">
-                                <div style={{ display: "block" }} className="link_text">{item.name}</div>
+                            <NavLink
+                                to={item.path}
+                                key={index}
+                                className="link" activeclassName="active">
+                             <div style={{ display: "block" }} className="link_text">{item.name}</div>
                             </NavLink>
                         ))
                     }
