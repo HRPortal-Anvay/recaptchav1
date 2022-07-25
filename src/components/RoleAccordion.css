@@ -1,5 +1,4 @@
 .whole {
-  background-color: rebeccapurple;
   margin-left: 1%;
 }
 
@@ -30,17 +29,3 @@
   height: 0;
 }
 
-/* .box:nth-child(3n) {
-  background: silver;
-}
-.checkboxes::before, .checkboxes::after {
-  content: '';
-  width: 100%;
-  order: 1;
-}
-.box:nth-child(n + 4) {
-  order: 1;
-}
-.box:nth-child(n + 7) {
-  order: 2;
-} */
