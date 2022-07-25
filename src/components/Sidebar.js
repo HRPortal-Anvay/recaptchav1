@@ -1,15 +1,6 @@
 
 import './Sidebar.css'
 import React from 'react';
-// import {
-//     FaTh,
-//     FaBars,
-//     FaUserAlt,
-//     FaRegChartBar,
-//     FaCommentAlt,
-//     FaShoppingBag,
-//     FaThList
-// }from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 import pfp from '../images/pfp.png'
 import Features from './Features';
@@ -25,32 +16,26 @@ const Sidebar = (
         {
             path: "/dashboard",
             name: "Dashboard",
-            // icon:<FaTh/>
         },
         {
             path: "/roles",
             name: "Role Management",
-            // icon:<FaUserAlt/>
         },
         {
             path: "/analytics",
             name: "xxxxxxxxxx",
-            // icon:<FaRegChartBar/>
         },
         {
             path: "/comment",
             name: "xxxxxxxxxx",
-            // icon:<FaCommentAlt/>
         },
         {
             path: "/product",
             name: "xxxxxxxxxx",
-            // icon:<FaShoppingBag/>
         },
         {
             path: "/productList",
             name: "xxxxxxxxxx",
-            // icon:<FaThList/>
         }
     ]
 
