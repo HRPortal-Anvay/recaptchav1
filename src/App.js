@@ -38,10 +38,6 @@ function LoginForm() {
     setVerified(true)
   }
 
-  const handleError = () => {
-    setErrorMessage("Invalid Email/Password")
-  }
-
 
   const handleApi = () => {
     axios.post('http://localhost:9092/token', {
@@ -65,7 +61,6 @@ function LoginForm() {
       })
       .catch(error => {
         console.log(error)
-        document.getElementsByClassName("error")
         setErrorMessage("Invaid Email/Password")
       })
   }
@@ -95,11 +90,8 @@ function LoginForm() {
               />
             </div>
 
-            {/* insert Error */}
             <div className="error">
-
-              {errorMessage && <div className="error"> {errorMessage} </div>}
-
+              {errorMessage}
             </div>
 
             <div className="form-group">
