@@ -47,13 +47,14 @@
 .r-list {
   /* background-color: yellow; */
   background-color: rgb(217,217,217);
-  width: 110px;
+  width: 190px;
   padding-left: 7px;
   position: absolute;
-  bottom: 105%;
-  left: 25rem;
+  bottom: 100%;
+  left: 21rem;
   border: none;
-  
+  padding-top: 3.5px;
+  padding-bottom: 3.5px;
 }
 
 
@@ -77,6 +78,12 @@
   width: 35%;
   position: relative;
   left: 1%;
+}
+
+.role-name #role {
+  padding-top: 3.5px;
+  padding-bottom: 3.5px;
+  width: 190px;
 }
 
 .flex-container {
