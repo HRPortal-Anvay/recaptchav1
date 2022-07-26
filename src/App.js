@@ -13,6 +13,7 @@ function LoginForm() {
   const [emailId, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [verified, setVerified] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
   // const [success, setSuccess] = useState(false)
 
 
@@ -35,6 +36,10 @@ function LoginForm() {
   const onChange = (value) => {
     console.log("Captcha value: ", value)
     setVerified(true)
+  }
+
+  const handleError = () => {
+    setErrorMessage("Invalid Email/Password")
   }
 
 
@@ -60,6 +65,8 @@ function LoginForm() {
       })
       .catch(error => {
         console.log(error)
+        document.getElementsByClassName("error")
+        setErrorMessage("Invaid Email/Password")
       })
   }
 
@@ -89,6 +96,11 @@ function LoginForm() {
             </div>
 
             {/* insert Error */}
+            <div className="error">
+
+              {errorMessage && <div className="error"> {errorMessage} </div>}
+
+            </div>
 
             <div className="form-group">
               <input
@@ -128,12 +140,12 @@ function LoginForm() {
             {(verified) ? (
 
               <div className="button">
-                  <Button
-                    onClick={handleApi}
-                    type="submit"
-                    disabled={!verified}
-                    className='form-button'
-                  > Login</Button>
+                <Button
+                  onClick={handleApi}
+                  type="submit"
+                  disabled={!verified}
+                  className='form-button'
+                > Login</Button>
               </div>
             ) : (
               <div className="button">
