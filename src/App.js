@@ -40,7 +40,8 @@ function LoginForm() {
 
 
   const handleApi = () => {
-    axios.post('http://localhost:9092/token', {
+    // axios.post('http://localhost:9092/token', {
+    axios.post('192.168.0.120:8080/intranet/rest/v1/user/login', {
       emailId: emailId,
       password: password
 
@@ -61,7 +62,7 @@ function LoginForm() {
       })
       .catch(error => {
         console.log(error)
-        setErrorMessage("Invaid Email/Password")
+        setErrorMessage("Invalid Email/Password")
       })
   }
 
