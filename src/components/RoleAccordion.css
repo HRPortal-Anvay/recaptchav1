@@ -10,6 +10,11 @@
   color: black !important;
 }
 
+.a-main .Leave-Management {
+  /* text-align: left; */
+  border: 2px solid blue;
+}
+
 .checkboxes {
   display: flex;
   flex-flow: row wrap;
