@@ -49,7 +49,7 @@ function LoginForm() {
 
       .then(result => {
 
-        if (result.data.token) {
+        if (result) {
           console.log(result)
           console.log(result.data.token)
           localStorage.setItem('token', result.data.token)

@@ -55,7 +55,8 @@ const Sidebar = (
                             <NavLink
                                 to={item.path}
                                 key={index}
-                                className="link" activeclassName="active">
+                                className="link" 
+                            >
                              <div style={{ display: "block" }} className="link_text">{item.name}</div>
                             </NavLink>
                         ))
