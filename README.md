@@ -15,6 +15,6 @@ yarn
 <img width="1440" alt="Screen Shot 2022-07-25 at 2 52 01 PM" src="https://user-images.githubusercontent.com/53208269/180743804-02cf2d13-01b3-430d-81c4-840b4cb8ab17.png">
 --- 
 *Role Management*
-<img width="1440" alt="Screen Shot 2022-08-01 at 3 10 32 PM" src="https://user-images.githubusercontent.com/53208269/182120574-5cb044f1-0235-4edd-8747-bf477b0e4112.png">
+<img width="1440" alt="Screen Shot 2022-08-01 at 3 12 43 PM" src="https://user-images.githubusercontent.com/53208269/182120982-4739705f-66e9-43e5-a692-1026c8e2e652.png">
 --- 
 
