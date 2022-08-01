@@ -64,8 +64,9 @@ export default function NavBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <Link to={'/profile'} id="logout" onClick={handleMenuClose}><MenuItem>Profile</MenuItem></Link>
       <Link to={'/'} id='logout'><MenuItem>Logout</MenuItem></Link>
+      {/* <MenuItem onClick={handleMenuClose}>Close</MenuItem> */}
     </Menu>
   );
 
