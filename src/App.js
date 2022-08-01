@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import axios from "axios"
 import logo from './images/ps-logo.png'
 import background from './images/background.png'
@@ -14,9 +14,6 @@ function LoginForm() {
   const [password, setPassword] = useState('')
   const [verified, setVerified] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
-  // const [success, setSuccess] = useState(false)
-
-
 
   let navigate = useNavigate();
 
@@ -40,7 +37,6 @@ function LoginForm() {
 
 
   const handleApi = () => {
-    // axios.post('http://localhost:9092/token', {
     axios.post('http://192.168.0.120:8080/intranet/rest/v1/user/login', {
       emailId: emailId,
       password: password
