@@ -32,7 +32,7 @@ export default function App() {
   }
 
   const onChange = (value) => {
-    console.log("Captcha value: ", value)
+    console.log("CAPTCHA: ", value)
     setVerified(true)
   }
 
