@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-// import * as React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -7,7 +6,6 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import './RoleAccordion.css';
 import Checkbox from '@mui/material/Checkbox';
-// import { Checkbox } from '@material-ui/core/'
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 
