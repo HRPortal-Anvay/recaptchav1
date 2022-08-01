@@ -13,7 +13,7 @@ import FormGroup from '@mui/material/FormGroup';
 
 export default function RoleAccordion() {
 
-  const [name, setName] = useState([])
+  const [name] = useState([])
   function getValue(e) {
     let data = name;
     data.push(e.target.value)

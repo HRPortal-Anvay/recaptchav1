@@ -3,9 +3,6 @@ import './Sidebar.css'
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import pfp from '../images/pfp.png'
-import Features from './Features';
-
-import Roles from '../pages/Roles';
 
 
 const Sidebar = (
