@@ -47,9 +47,11 @@ export default function App() {
       .then(result => {
 
         if (result) {
-          console.log(result)
-          console.log(result.data.token)
-          localStorage.setItem('token', result.data.token)
+          console.log(result.data)
+          localStorage.setItem('Auth Token', result.data.authToken.token)
+          localStorage.setItem('Auth Token Exp', result.data.authToken.expiry)
+          localStorage.setItem('Refresh Token', result.data.refreshToken.token)
+          localStorage.setItem('Refresh Token Exp', result.data.refreshToken.expiry)
           setVerified(true)
           console.log(result.config.data)
           // window.location.href="/dashboard"
