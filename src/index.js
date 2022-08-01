@@ -14,7 +14,7 @@ import ForgotPassword from './pages/ForgotPassword'
 import CheckEmail from './pages/CheckEmail'
 import NewPassword from './pages/NewPassword'
 import PasswordReset from './pages/PasswordReset';
-import Dashboard from './pages/Dashboard';
+import NavBar from './pages/NavBar';
 import Roles from './pages/Roles';
 import Features from './components/Features';
 
@@ -24,7 +24,7 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<App />} />
-      <Route path="/dashboard/" element={<Dashboard />} >
+      <Route path="/dashboard/" element={<NavBar />} >
         <Route path='roles' element={<Roles />}></Route>
         <Route path='features' element={<Features />}></Route>
       </Route>

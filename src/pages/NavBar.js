@@ -10,14 +10,14 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import { Link } from 'react-router-dom';
-import './Dashboard.css'
+import './NavBar.css'
 import logo from '../images/ps-logo.png'
 import Sidebar from '../components/Sidebar';
 import pfp from '../images/pfp.jpeg'
 
 
 
-export default function Dashboard() {
+export default function NavBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
