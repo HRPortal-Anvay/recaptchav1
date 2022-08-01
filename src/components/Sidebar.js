@@ -1,7 +1,7 @@
 
 import './Sidebar.css'
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import pfp from '../images/pfp.png'
 import Features from './Features';
 
@@ -14,27 +14,27 @@ const Sidebar = (
     // const[isOpen ,setIsOpen] = useState(false); const toggle = () => setIsOpen (!isOpen);
     const menuItem = [
         {
-            path: "/dashboard",
+            path: "Features",
             name: "Dashboard",
         },
         {
-            path: "/roles",
+            path: "roles",
             name: "Role Management",
         },
         {
-            path: "/analytics",
+            path: "",
             name: "xxxxxxxxxx",
         },
         {
-            path: "/comment",
+            path: "",
             name: "xxxxxxxxxx",
         },
         {
-            path: "/product",
+            path: "",
             name: "xxxxxxxxxx",
         },
         {
-            path: "/productList",
+            path: "",
             name: "xxxxxxxxxx",
         }
     ]
@@ -66,9 +66,7 @@ const Sidebar = (
                 </div>
             </div>
             <main>
-                {/* {children} */}
-                {/* <Features /> */}
-                <Roles />
+                <Outlet />
             </main>
         </div>
     );

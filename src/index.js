@@ -6,6 +6,7 @@ import './pages/CheckEmail'
 import './pages/NewPassword'
 import './pages/PasswordReset'
 import './pages/Roles'
+import './components/Features'
 import App from './App';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
@@ -15,6 +16,7 @@ import NewPassword from './pages/NewPassword'
 import PasswordReset from './pages/PasswordReset';
 import Dashboard from './pages/Dashboard';
 import Roles from './pages/Roles';
+import Features from './components/Features';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -22,7 +24,10 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<App />} />
-      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/dashboard/" element={<Dashboard />} >
+        <Route path='roles' element={<Roles />}></Route>
+        <Route path='features' element={<Features />}></Route>
+      </Route>
       <Route path="/forgot" element={<ForgotPassword />} />
       <Route path="/check" element={<CheckEmail />} />
       <Route path="/reset" element={<NewPassword />} />

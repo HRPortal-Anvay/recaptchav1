@@ -13,6 +13,11 @@ export default function Roles() {
     console.log(mylist.options[mylist.selectedIndex].text)
   }
 
+  const handleAdd = () => {
+    var role = document.getElementById("role")
+    console.log(role)
+  }
+
   return (
     <div className="r-roles">
 
@@ -29,7 +34,7 @@ export default function Roles() {
       </form>
 
       <button className='plus-btn'>
-        <FontAwesomeIcon icon={faCirclePlus} className="plus" size='2x' />
+        <FontAwesomeIcon icon={faCirclePlus} className="plus" size='2x' onClick={handleAdd}/>
       </button>
       <hr className='hr' />
 
