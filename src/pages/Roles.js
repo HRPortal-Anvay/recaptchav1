@@ -11,9 +11,7 @@ export default class Roles extends Component {
     super()
     this.state = {
       inputValue: "",
-      empList: [
-        
-      ]
+      empList: []
     }
   }
 
@@ -61,7 +59,7 @@ export default class Roles extends Component {
           </select>
         </form>
 
-        <button className='plus-btn' onClick={this.addNewEmp}>
+        <button className='plus-btn' onClick={this.addNewEmp} title="Add Role">
           <FontAwesomeIcon icon={faCirclePlus} className="plus" size='2x' />
         </button>
         <hr className='hr' />

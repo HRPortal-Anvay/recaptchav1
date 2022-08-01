@@ -5,18 +5,12 @@ import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
 
-
-export default function ForgotPassword({ Login, error }) {
+export default function ForgotPassword() {
 
   const [details, setDetails] = useState({ email: "", password: "" });
 
-
-
-
-
   const submitHandler = e => {
     e.preventDefault()
-
   }
 
   return (
@@ -42,13 +36,9 @@ export default function ForgotPassword({ Login, error }) {
           <div className="f-form-group">
             <input type="email" name="email" id="email" placeholder='Enter your email' className='f-btn-css' onChange={e => setDetails({ ...details, password: e.target.value })} value={details.password} />
           </div>
-<br />
+          <br />
           <div className="f-button">
-            {/* <Button
-                type="submit"
-                className="form-button"
-              > Reset Password
-              </Button> */}
+
 
             <Link to={"/check"}>
               <Button
@@ -60,11 +50,8 @@ export default function ForgotPassword({ Login, error }) {
           </div>
 
           <br />
-          
+
           <div className="f-login">
-            {/* <a href='#'>
-            ← Back to log in
-            </a> */}
             <Link to={"/"}>← Back to log in</Link>
           </div>
 

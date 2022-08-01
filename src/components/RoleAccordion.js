@@ -19,8 +19,6 @@ export default function RoleAccordion() {
   }
 
 
-
-
   return (
     <div className="whole">
       <Accordion className="a-main" >
@@ -191,12 +189,10 @@ export default function RoleAccordion() {
                 onChange={(e) => { getValue(e) }}
               />
             </FormGroup>
-
           </div>
-
-
         </AccordionDetails>
       </Accordion>
+
 
       <Accordion style={{ marginTop: "30px" }} className="a-main"  >
         <AccordionSummary

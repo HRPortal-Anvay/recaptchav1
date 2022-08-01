@@ -1,6 +1,5 @@
-import * as React from 'react';
+import React from 'react';
 // import { useEffect } from 'react';
-// import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -15,7 +14,7 @@ import './Dashboard.css'
 import logo from '../images/ps-logo.png'
 import Sidebar from '../components/Sidebar';
 import pfp from '../images/pfp.jpeg'
-import Features from '../components/Features';
+
 
 
 export default function Dashboard() {
@@ -154,7 +153,8 @@ export default function Dashboard() {
         </AppBar>
         {renderMobileMenu}
         {renderMenu}
-        {/* Fill rest of Dashboard content from here */}
+
+{/* Dashboard Content starts from below */}
         <Sidebar />
       </Box>
     </div>

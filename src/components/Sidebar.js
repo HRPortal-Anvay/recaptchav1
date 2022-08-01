@@ -1,17 +1,13 @@
-
 import './Sidebar.css'
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import pfp from '../images/pfp.png'
 
 
-const Sidebar = (
-    // { children }
-) => {
-    // const[isOpen ,setIsOpen] = useState(false); const toggle = () => setIsOpen (!isOpen);
+const Sidebar = () => {
     const menuItem = [
         {
-            path: "Features",
+            path: "features",
             name: "Dashboard",
         },
         {
@@ -55,9 +51,9 @@ const Sidebar = (
                             <NavLink
                                 to={item.path}
                                 key={index}
-                                className="link" 
+                                className="link"
                             >
-                             <div style={{ display: "block" }} className="link_text">{item.name}</div>
+                                <div style={{ display: "block" }} className="link_text">{item.name}</div>
                             </NavLink>
                         ))
                     }

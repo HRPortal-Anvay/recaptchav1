@@ -4,13 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import zxcvbn from 'zxcvbn';
-// import './PasswordStrength.css'
 
 
-
-
-
-export default function NewPassword({ Login, error }) {
+export default function NewPassword() {
 
   const [details, setDetails] = useState({ email: "", password: "" });
   const [password, setPassword] = useState('');
@@ -96,7 +92,6 @@ export default function NewPassword({ Login, error }) {
               placeholder='Password'
               onChange={e => setPassword(e.target.value)}
             />
-            {/* <PasswordStrength password={password} className='password'/> */}
             <div className="title">
               <strong>Password Strength: </strong>{createPassLabel()}
             </div>
@@ -126,9 +121,6 @@ export default function NewPassword({ Login, error }) {
         </div>
 
       </form>
-
-
-
 
     </div>
   )
