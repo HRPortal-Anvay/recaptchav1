@@ -10,7 +10,7 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import { Link } from 'react-router-dom';
-import './NavBar.css'
+import './Dashboard.css'
 import logo from '../images/ps-logo.png'
 import Sidebar from '../components/Sidebar';
 import pfp from '../images/pfp.jpeg'

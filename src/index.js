@@ -14,7 +14,7 @@ import ForgotPassword from './pages/ForgotPassword'
 import CheckEmail from './pages/CheckEmail'
 import NewPassword from './pages/NewPassword'
 import PasswordReset from './pages/PasswordReset';
-import NavBar from './pages/NavBar';
+import NavBar from './pages/Dashboard';
 import Roles from './pages/Roles';
 import Features from './components/Features';
 
