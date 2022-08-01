@@ -8,8 +8,9 @@ import { Button } from 'react-bootstrap';
 import './App.css'
 import ReCAPTCHA from "react-google-recaptcha";
 
+// API: http://192.168.0.120:8080/intranet/v2/api-docs
 
-function LoginForm() {
+export default function App() {
   const [emailId, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [verified, setVerified] = useState(false)
@@ -164,4 +165,3 @@ function LoginForm() {
 }
 
 
-export default LoginForm;
