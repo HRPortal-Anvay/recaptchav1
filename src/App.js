@@ -36,26 +36,26 @@ export default function App() {
     setVerified(true)
   }
 
-  const handleChange = (event) => {
-    const input = event.target.value;
-    const value = input.type === 'checkbox' ? input.checked : input.value;
-    this.setState({ [input.name]: value });
-    console.log("method working")
-  };
+  // const handleChange = (event) => {
+  //   const input = event.target.value;
+  //   const value = input.type === 'checkbox' ? input.checked : input.value;
+  //   this.setState({ [input.name]: value });
+  //   console.log("method working")
+  // };
 
-  const handleFormSubmit = () => {
-    const { email, rememberMe } = this.state;
-    localStorage.setItem('rememberMe', rememberMe);
-    localStorage.setItem('email', rememberMe ? email : '');
-    localStorage.setItem('password', rememberMe ? password : '');
-  };
+  // const handleFormSubmit = () => {
+  //   const { email, rememberMe } = this.state;
+  //   localStorage.setItem('rememberMe', rememberMe);
+  //   localStorage.setItem('email', rememberMe ? email : '');
+  //   localStorage.setItem('password', rememberMe ? password : '');
+  // };
 
-  function componentDidMount() {
-    const rememberMe = localStorage.getItem('rememberMe') === 'true';
-    const email = rememberMe ? localStorage.getItem('email') : '';
-    const password = rememberMe ? localStorage.getItem('password') : '';
-    this.setState({ email, password, rememberMe });
-  }
+  // function componentDidMount() {
+  //   const rememberMe = localStorage.getItem('rememberMe') === 'true';
+  //   const email = rememberMe ? localStorage.getItem('email') : '';
+  //   const password = rememberMe ? localStorage.getItem('password') : '';
+  //   this.setState({ email, password, rememberMe });
+  // }
 
 
   const handleApi = () => {
