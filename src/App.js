@@ -36,29 +36,19 @@ export default function App() {
     setVerified(true)
   }
 
-  // const handleChange = (event) => {
-  //   const input = event.target.value;
-  //   const value = input.type === 'checkbox' ? input.checked : input.value;
-  //   this.setState({ [input.name]: value });
-  //   console.log("method working")
-  // };
 
-  // const handleFormSubmit = () => {
-  //   const { email, rememberMe } = this.state;
-  //   localStorage.setItem('rememberMe', rememberMe);
-  //   localStorage.setItem('email', rememberMe ? email : '');
-  //   localStorage.setItem('password', rememberMe ? password : '');
-  // };
+  const handleChange = (event) => {
+    const input = event.target;
+    const value = input.type === 'checkbox' ? input.checked : input.value;
+    localStorage.setItem('rememberMe', value)
 
-  // function componentDidMount() {
-  //   const rememberMe = localStorage.getItem('rememberMe') === 'true';
-  //   const email = rememberMe ? localStorage.getItem('email') : '';
-  //   const password = rememberMe ? localStorage.getItem('password') : '';
-  //   this.setState({ email, password, rememberMe });
-  // }
-
+    this.setState({ [input.name]: value})
+    console.log(this.handleChange)
+  };
 
   const handleApi = () => {
+    localStorage.setItem('email', emailId)
+    localStorage.setItem('password', password)
     axios.post('http://192.168.0.120:8080/intranet/rest/v1/user/login', {
       emailId: emailId,
       password: password
@@ -145,7 +135,7 @@ export default function App() {
 
             <div className="extra-info">
               <div className="remember">
-                <input type="checkbox" id="remember" />
+                <input type="checkbox" id="remember" onChange={handleChange}/>
                 Remember Me
               </div>
               <div className="forgot-password">
