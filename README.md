@@ -17,4 +17,7 @@ yarn
 *Role Management*
 <img width="1440" alt="Screen Shot 2022-08-01 at 3 12 43 PM" src="https://user-images.githubusercontent.com/53208269/182120982-4739705f-66e9-43e5-a692-1026c8e2e652.png">
 --- 
-
+*Profile*
+<img width="1440" alt="Screen Shot 2022-08-02 at 6 17 53 PM" src="https://user-images.githubusercontent.com/53208269/182378316-420f71f3-1ff6-452f-9d2e-1bef15117bef.png">
+- incomplete
+---
