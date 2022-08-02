@@ -11,12 +11,17 @@ export default class Roles extends Component {
     super()
     this.state = {
       inputValue: "",
-      empList: []
+      empList: [],
+      verified: false
     }
   }
 
   txtEmployee = e => {
-    this.setState({ inputValue: e.target.value })
+    this.setState({ 
+      inputValue: e.target.value,
+      // verified: true
+    })
+
   }
 
   addNewEmp = () => {
@@ -28,13 +33,13 @@ export default class Roles extends Component {
       ],
     }))
     // console.log(this.inputValue + "hello")
-    alert("New Role Added")
   }
 
   selectedRole() {
     var mylist = document.getElementById("r-list");
     document.getElementById("role").value = mylist.options[mylist.selectedIndex].text;
     console.log(mylist.options[mylist.selectedIndex].text)
+    // alert(mylist.options[mylist.selectedIndex].text)
   }
 
   render() {
@@ -56,11 +61,16 @@ export default class Roles extends Component {
             <option> Admin </option>
             <option> Manager </option>
             <option> Employee </option>
-            { empRecords }
+            {empRecords}
           </select>
         </form>
 
-        <button className='plus-btn' onClick={this.addNewEmp} title="Add Role">
+        <button 
+          className='plus-btn' 
+          onClick={this.addNewEmp} 
+          // onClick={() => this.verified ? this.addNewEmp : undefined} 
+
+          title="Add Role" >
           <FontAwesomeIcon icon={faCirclePlus} className="plus" size='2x' />
         </button>
         <hr className='hr' />
@@ -69,12 +79,12 @@ export default class Roles extends Component {
           <ul className='flex-container space-between'>
             <li className='flex-item'>Role Name:</li>
             <li>
-              <input 
-                type="text" 
-                id="role" 
-                size="20" 
+              <input
+                type="text"
+                id="role"
+                size="20"
                 className='flex-item'
-                onChange={this.txtEmployee} 
+                onChange={this.txtEmployee}
                 value={this.state.inputValue}
               />
             </li>
