@@ -28,6 +28,7 @@ export default class Roles extends Component {
       ],
     }))
     // console.log(this.inputValue + "hello")
+    alert("New Role Added")
   }
 
   selectedRole() {

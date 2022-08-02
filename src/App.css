@@ -34,7 +34,7 @@
   color: red;
 }
 
-.error-color{
+.error-color {
   position: relative;
   border: 1px solid red;
   outline: none;
@@ -83,7 +83,7 @@ form {
 .image {
   width: 100%;
   height: 100vh;
-  
+
 }
 
 .image img {
@@ -110,4 +110,8 @@ form {
 
 .extra-info .remember {
   color: rgb(126, 126, 126);
+}
+
+.extra-info #remember {
+  margin-right: 5px;
 }
