@@ -36,28 +36,25 @@ export default function App() {
     setVerified(true)
   }
 
-  const email = (e) => {
-    handleEmailId(e)
-    handleChange()
-  } 
-
   const handleChange = (event) => {
-    const input = event.target;
+    const input = event.target.value;
     const value = input.type === 'checkbox' ? input.checked : input.value;
     this.setState({ [input.name]: value });
     console.log("method working")
   };
 
   const handleFormSubmit = () => {
-    const { user, rememberMe } = this.state;
+    const { email, rememberMe } = this.state;
     localStorage.setItem('rememberMe', rememberMe);
-    localStorage.setItem('user', rememberMe ? user : '');
+    localStorage.setItem('email', rememberMe ? email : '');
+    localStorage.setItem('password', rememberMe ? password : '');
   };
 
-  const componentDidMount = () => {
+  function componentDidMount() {
     const rememberMe = localStorage.getItem('rememberMe') === 'true';
-    const user = rememberMe ? localStorage.getItem('user') : '';
-    this.setState({ user, rememberMe });
+    const email = rememberMe ? localStorage.getItem('email') : '';
+    const password = rememberMe ? localStorage.getItem('password') : '';
+    this.setState({ email, password, rememberMe });
   }
 
 
@@ -111,7 +108,7 @@ export default function App() {
                 //   // handleEmailId(); 
                 //   // handleChange() 
                 // }}
-                onChange={email}
+                onChange={handleEmailId}
                 className='btn-css'
                 placeholder='Email'
                 required
@@ -148,8 +145,8 @@ export default function App() {
 
             <div className="extra-info">
               <div className="remember">
-                <input type="checkbox" id="remember"/>
-                 Remember Me
+                <input type="checkbox" id="remember" />
+                Remember Me
               </div>
               <div className="forgot-password">
                 <Link to={'/forgot'}>Forgot Password?</Link>
